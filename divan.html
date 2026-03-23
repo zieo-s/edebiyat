@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divan Edebiyatı</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+    }
+    h1, h2 {
+        text-align: center;
+        color: #4B0082;
+    }
+    .note {
+        text-align: center;
+        font-style: italic;
+        color: #555;
+        margin-bottom: 15px;
+    }
+    .container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .box {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        padding: 20px;
+        width: 300px; /* Hepsi aynı genişlik */
+    }
+    .accordion {
+        cursor: pointer;
+        padding: 10px;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        transition: background-color 0.3s;
+        width: 100%;
+        text-align: left;
+        background-color: #eee;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .accordion::after {
+        content: "▼";
+        float: right;
+        font-weight: normal;
+    }
+    .accordion.active::after {
+        content: "▲";
+    }
+    .accordion:hover {
+        background-color: #ddd;
+    }
+    .panel {
+        padding: 10px;
+        display: none;
+        background-color: #f9f9f9;
+        overflow: hidden;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+    .sub-panel {
+        padding-left: 15px;
+        background-color: #f0f0f0;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+<h1>Divan Edebiyatı</h1>
+<p class="note">Kutuların bölümlerine tıklayarak detaylı bilgi alabilirsiniz.</p>
+
+<div class="container">
+    <!-- Genel Bilgi ve Nazım Türleri -->
+    <div class="box">
+        <h2>Genel Bilgi & Nazım Türleri</h2>
+        <p>Divan edebiyatı, Osmanlı döneminde gelişmiş klasik Türk edebiyatıdır. Aruz ölçüsü kullanılır, genellikle beyit ve bentlerden oluşur. Temalar: aşk, doğa, tasavvuf, kahramanlık, dini ve öğüt verici konular.</p>
+        <ul>
+            <li>Beyitlerle Oluşan: Gazel, Kaside, Mesnevi, Müstezat, Kıt'a</li>
+            <li>Dörtlüklerle Oluşan: Murabba, Şarkı, Rubai, Tuyuğ</li>
+            <li>Bentlerle Oluşan: Terkib-i bent, Terci-i bent</li>
+        </ul>
+    </div>
+
+    <!-- Beyitlerle Oluşan -->
+    <div class="box">
+        <h2>Beyitlerden Oluşan</h2>
+        <button class="accordion">Gazel</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>Konular: Aşk, doğa, şarap, tasavvuf</li>
+                <li>Beyitlerle yazılır, matla/müteferrika beyitleri vardır</li>
+                <li>Müstezat: Gazelin yan mısralarla uzatılmış hâlidir</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Kaside</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>Konular: Övgü, kahramanlık, dini temalar</li>
+                <li>Beyitlerden oluşur</li>
+            </ul>
+            <p>Bölümleri:</p>
+            <ul class="sub-panel">
+                <li>Nesib / Teşbib: Giriş, doğa veya aşk konuları</li>
+                <li>Girizgâh: Kasidenin giriş beyitleri</li>
+                <li>Methiye: Övülen kişiye övgü</li>
+                <li>Fahriye: Şairin kendini övdüğü kısım</li>
+                <li>Dua: Kapanış, Allah’a dua veya iyi dilekler</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Mesnevi</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>Uzun hikaye veya olayları anlatır</li>
+                <li>Beyitlerle yazılır</li>
+            </ul>
+            <p>Müstezat uygulanabilir, yan mısralarla zenginleştirilir.</p>
+        </div>
+
+        <button class="accordion">Müstezat</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>Gazelin yan mısralarla uzatılmış hâli</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Kıt'a</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>Kısa beyitlerden oluşur</li>
+                <li>Genellikle tek konu işler</li>
+            </ul>
+            <p>Müstezat uygulanabilir.</p>
+        </div>
+    </div>
+
+    <!-- Dörtlüklerle Oluşan -->
+    <div class="box">
+        <h2>Dörtlüklerle Oluşan</h2>
+        <button class="accordion">Murabba</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>Her bent 4 mısradan oluşur</li>
+                <li>Öğüt ve dini/felsefi konular işlenir</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Şarkı</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>Dörtlüklerden oluşur</li>
+                <li>Genellikle aşk ve doğa konulu</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Rubai</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>4 mısra</li>
+                <li>Felsefi ve kısa anlamlı şiir türü</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Tuyuğ</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>4 mısra</li>
+                <li>Azeri ve Fars etkili kısa şiir türü</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Bentlerle Oluşan -->
+    <div class="box">
+        <h2>Bentlerle Oluşan</h2>
+        <button class="accordion">Terkib-i bent</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>Bentler arasında kafiye tekrarları olan uzun şiir</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Terci-i bent</button>
+        <div class="panel">
+            <ul>
+                <li>Ölçü: Aruz</li>
+                <li>Terkib-i bentin bir çeşidi, her bent farklı kafiyelerle biter</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(acc => {
+        acc.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            panel.style.display = (panel.style.display === "block") ? "none" : "block";
+        });
+    });
+</script>
+</body>
+</html>
